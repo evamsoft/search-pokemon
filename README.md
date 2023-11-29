@@ -1,6 +1,89 @@
-# Getting Started with Create React App
+# PokemonSearcher Component
+The PokemonSearcher component is a React component that allows users to search for Pokemon information. It provides a search box where users can enter the name of a Pokemon, and it displays the corresponding Pokemon information based on the search result.
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This project is bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+
+## Props
+The PokemonSearcher component does not accept any props.
+
+## Usage
+
+### To use the PokemonSearcher component, follow these steps:
+1. Import the PokemonSearcher component from the appropriate file.
+2. Render the PokemonSearcher component in your React application, providing any necessary props.
+
+```jsx
+import React from 'react';
+import PokemonSearcher from './components/PokemonSearcher';
+
+function App() {
+  return (
+    <div>
+      <h1>Welcome to the Pokemon Searcher!</h1>
+      <PokemonSearcher />
+    </div>
+  );
+}
+
+export default App;
+```
+
+## Functionality
+The PokemonSearcher component provides the following functionality:
+
+### Search
+The PokemonSearcher component includes a search box where users can enter the name of a Pokemon they want to search for. The search box allows users to input the name and triggers the search when the user submits the form.
+
+### Retrieve Pokemon Information
+Once the user clicks search, the PokemonSearcher component uses the useFetchPokemon hook to fetch the Pokemon information based on the entered name. It passes the entered name to the hook and receives the state of the fetch operation.
+
+### Display Pokemon Information
+Based on the state of the fetch operation, the PokemonSearcher component renders different views to display the Pokemon information:
+
+#### Pending View
+When the fetch operation is pending, a loading view is displayed to indicate that the data is being fetched.
+
+#### Success View
+When the fetch operation is successful, the Pokemon information is displayed using the SuccessPokemonView component.
+
+#### Error View
+When the fetch operation encounters an error, an error view is displayed to inform the user about the error.
+
+
+## Detailed Usage Example
+Here's an example of how to use the PokemonSearcher component in a React application:
+
+In this example, the PokemonSearcher component is rendered within the App component, allowing users to search for Pokemon information.
+
+
+```jsx
+import React from 'react';
+import PokemonSearcher from './components/PokemonSearcher';
+
+function App() {
+  return (
+    <div>
+      <h1>Welcome to the Pokemon Searcher!</h1>
+      <PokemonSearcher />
+    </div>
+  );
+}
+
+export default App;
+```
+
+## Detailed Output Examples
+
+### Searching for `"Pikachu"`
+When the user searches for "Pikachu", the PokemonSearcher component will display the corresponding Pokemon information for Pikachu.
+
+### Searching for `"Mew"`
+When the user searches for "Mew", the PokemonSearcher component will display the corresponding Pokemon information for Mew.
+
+### Searching for `"Charizard"`
+When the user searches for "Charizard", the PokemonSearcher component will display the corresponding Pokemon information for Charizard.
+
+Note: The specific output and formatting of the Pokemon information may vary based on the implementation of the SuccessPokemonView component.
 
 ## Available Scripts
 
@@ -28,19 +111,3 @@ The build is minified and the filenames include the hashes.\
 Your app is ready to be deployed!
 
 See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
