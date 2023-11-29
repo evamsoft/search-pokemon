@@ -5,7 +5,7 @@ const Container = styled.div`
     min-height: 360px;
     text-align: center;
     border: 1px solid black;
-    background-color: lightGray;
+    //background-color: lightGray;
     padding: 15px 0 0 0;
 `
 

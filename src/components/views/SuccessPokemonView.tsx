@@ -4,7 +4,7 @@ import { Pokemon } from '../../types/types'
 export const Container = styled.div`
     text-align: center;
     border: 0px solid black;
-    background-color: lightGray;
+    //background-color: lightGray;
     padding: 10px 0 10px 0;
     height: 100%px;
 `
